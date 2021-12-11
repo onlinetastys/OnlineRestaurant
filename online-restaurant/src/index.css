@@ -1,13 +1,157 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main {
+  transition: margin-left 0.5s; /*NAVBAR*/
+  background-color: rebeccapurple;
+}
+
+/* --------------------------- COLORS ---------------------------------- */
+.bg-light {
+  background-color: rgb(206, 160, 126);
+}
+.bg-dark {
+  background-color: rgb(68, 55, 66);
+}
+.font-light {
+  color: rgb(226, 232, 192);
+}
+.font-dark {
+  color: rgb(68, 55, 66);
+}
+
+/* --------------------------- COLORS ---------------------------------- */
+/* --------------------------- TEXT ---------------------------------- */
+
+/* --------------------------- TEXT ---------------------------------- */
+
+/* --------------------------- NAVBAR ---------------------------------- */
+.navbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.navbar-open-btn {
+  position: fixed;
+  padding: 10px;
+  top: 0px;
+  right: 0px;
+  z-index: 9;
+}
+
+.navbarOpen {
+  width: 250px;
+}
+
+.bodyOpen {
+  margin-left: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .navbarOpen {
+    width: 100%;
+  }
+}
+.navbar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f1f1f1;
+}
+
+.navbar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* --------------------------- NAVBAR ---------------------------------- */
+/* --------------------------- GRID ---------------------------------- */
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  position: relative;
+}
+
+.row {
+  width: 100%;
+}
+.row-stretch {
+  flex: 1;
+}
+
+.flex-item {
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .flex-container {
+    display: block;
+  }
+
+  .img-right {
+    min-width: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .img-right {
+    min-width: 500px;
+  }
+}
+
+.img-right {
+  display: block;
+  margin-left: auto;
+  /* max-width: 500px; */
+  /* min-width: 300px; */
+  width: 50%;
+}
+
+.fill-parent {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  position: relative;
+}
+.center-v-h {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------- GRID ---------------------------------- */
