@@ -1,13 +1,11 @@
 import React from 'react'
 
-function Image({ source, alt }:any) {
+function Image({ source, alt, maxWidth }:any) {
     return (
-         <div>
-          <img className="img-right"
+          <img style={{width: "100%", height:"100%", maxWidth: maxWidth}}
                src={source}
                alt={alt}
-                /> 
-        </div>
+                />
     )
 }
 

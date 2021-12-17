@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -17,6 +17,14 @@ code {
 .main {
   transition: margin-left 0.5s; /*NAVBAR*/
   background-color: rebeccapurple;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 /* --------------------------- COLORS ---------------------------------- */
@@ -95,63 +103,3 @@ code {
 }
 
 /* --------------------------- NAVBAR ---------------------------------- */
-/* --------------------------- GRID ---------------------------------- */
-.flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  position: relative;
-}
-
-.row {
-  width: 100%;
-}
-.row-stretch {
-  flex: 1;
-}
-
-.flex-item {
-  padding: 0;
-  margin: 0;
-}
-@media (max-width: 1024px) {
-  .flex-container {
-    display: block;
-  }
-
-  .img-right {
-    min-width: 300px;
-  }
-}
-@media (min-width: 1024px) {
-  .img-right {
-    min-width: 500px;
-  }
-}
-
-.img-right {
-  display: block;
-  margin-left: auto;
-  /* max-width: 500px; */
-  /* min-width: 300px; */
-  width: 50%;
-}
-
-.fill-parent {
-  width: 100%;
-  height: 100%;
-  min-height: 100px;
-  position: relative;
-}
-.center-v-h {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-/* --------------------------- GRID ---------------------------------- */
