@@ -5,9 +5,9 @@ import { ImCross } from 'react-icons/im'
 
 
 let appClassName = ""
-let onNavOpenBodyClass = "bodyOpen"
+let onNavOpenBodyClass = "" //not used atm
 
-const NavBar = ({app}:any) => {
+const NavBar = ({app, navElements}:any) => {
     const [isOpened, setIsOpenened] = useState(false);
 
     function openNav() {
@@ -23,16 +23,29 @@ const NavBar = ({app}:any) => {
         setIsOpenened(false);
         app.current.className = appClassName;
     } 
-    
+    function jumpToRef(id:string){
+        let targetElement = document.getElementById(id);
+        if(targetElement != null){
+            closeNav()
+            targetElement.scrollIntoView({behavior: 'smooth'}); 
+        }
+    }
+
     return (
     <>
-        <GiHamburgerMenu className="navbar-open-btn" onClick={openNav} />
+        <div className="navbar-open-btn font-light-2">
+            <GiHamburgerMenu onClick={openNav} />
+        </div>
         <div className={isOpened ? "navbar navbarOpen" : "navbar"}>
-            <ImCross onClick={closeNav} style={{color: "white"}}/>
-            <a href="#home">Home</a>
-            <a className="navlink" href="#about">About</a>
-            <a className="navlink" href="#news">News</a>
-            <a className="navlink" href="#contact">Contact</a>
+            <ImCross className='closebtn' onClick={closeNav}/>
+            <div className='d-flex flex-column justify-content-evenly align-items-center' style={{height:"100%"}}>
+                {
+                    navElements.map((item:any, i:any) => 
+                    {
+                        return <div key={item.NavId} onClick={() => jumpToRef(item.NavId)}>{item.NavName}</div>}
+                    )
+                }
+            </div>
         </div>
     </>
     )
