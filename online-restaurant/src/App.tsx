@@ -6,8 +6,9 @@ import { useRef, useEffect, useState } from 'react';
 import HomeRow from './Components/HomeRow';
 import AboutUsRow from './Components/AboutUsRow';
 import LocationsRow from './Components/LocationsRow';
-import FourthRow from './Components/FourthRow';
+import ProductsRow from './Components/ProductsRow';
 import EmentaRow from './Components/EmentaRow';
+import ContactsRow from './Components/ContactsRow';
 
  const navElements = [
     {
@@ -44,11 +45,11 @@ function App() {
     <div className="App main" ref={app}>
         <NavBar app={app} navElements={navElements}/>
         <HomeRow id={navElements[0].NavId} />
-        <AboutUsRow id={navElements[1].NavId} />
+        <AboutUsRow id={navElements[1].NavId}/>
         <LocationsRow />
-        <FourthRow />
+        <ProductsRow />
         <EmentaRow id={navElements[2].NavId} />
-        {/* CONTACTS - Another second row but with a header on the right and smaller text on the left*/}  
+        <ContactsRow id={navElements[3].NavId}  />
     </div>
   );
 }

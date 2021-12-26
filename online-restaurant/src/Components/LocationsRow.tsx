@@ -1,14 +1,15 @@
 import React from 'react'
 import Image from './Image';
+import MapAnimation from './MapAnimation';
 
 function ThirdRow() {
     return (
 <div className="container-fluid px-0">
   <div className="row d-flex align-items-center" style={{maxHeight:"600px", overflow:"hidden"}}>
-      <div style={{position:"absolute", height:"30%"}}>
+      <div style={{position:"absolute", height:"30%", zIndex:"9"}}>
         <div className='bg-light locations-block'>
           <div className="center-v">
-            <h3 className='font-dark'>
+            <h3 className='font-dark title-underline'>
               LOCAIS DE ATUAÇÃO:
             </h3>
             <p className='font-light-1'>Santa Comba Dão</p>
@@ -17,9 +18,7 @@ function ThirdRow() {
           </div>
         </div>
       </div>
-      <img style={{width: "100%", minWidth:"350px"}}
-            src="https://image.winudf.com/v2/image/Y29tLmhhYmliaS5UYXN0eWFuZFl1bW15Rm9vZFJlY2lwZV9zY3JlZW5fMTFfMTUxNDE5MDc2Ml8wMTA/screen-11.jpg?fakeurl=1&type=.jpg"
-            />
+      <MapAnimation />
   </div>
 </div> 
     )

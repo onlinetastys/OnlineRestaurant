@@ -21,7 +21,7 @@ function EmentaRow({id}:any) {
     return (
         <div id={id} className='container-fluid m-0 p-0' >
             <div className='p-1 bg-light font-dark'>
-                <h2>Ementa: ADICIONAR AQUI A DATA</h2>
+                <h2>Ementa ({getFormatedDate()})</h2>
             </div>
             <div className='row'>
                 <div className='col-md m-0 p-3 bg-special-1'>
@@ -47,5 +47,10 @@ function EmentaRow({id}:any) {
     )
 }
 
+function getFormatedDate(){
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    return date;
+}
 
 export default EmentaRow

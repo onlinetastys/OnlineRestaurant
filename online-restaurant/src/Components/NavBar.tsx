@@ -33,11 +33,13 @@ const NavBar = ({app, navElements}:any) => {
 
     return (
     <>
-        <div className="navbar-open-btn font-light-2">
-            <GiHamburgerMenu onClick={openNav} />
+        <div className="navbar-open-btn">
+            <div className='navbar-open-btn-shadow font-light-2' onClick={openNav}>
+                <GiHamburgerMenu className='center-vh' />
+            </div>
         </div>
-        <div className={isOpened ? "navbar navbarOpen" : "navbar"}>
-            <ImCross className='closebtn' onClick={closeNav}/>
+        <div className={isOpened ? "navbar navbarOpen bg-dark" : "navbar"}>
+            <ImCross className='closebtn font-light-1' onClick={closeNav}/>
             <div className='d-flex flex-column justify-content-evenly align-items-center' style={{height:"100%"}}>
                 {
                     navElements.map((item:any, i:any) => 
