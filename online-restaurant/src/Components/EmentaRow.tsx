@@ -26,7 +26,7 @@ function EmentaRow({id}:any) {
             <div className='row'>
                 <div className='col-md m-0 p-3 bg-special-1'>
                     {ementa == "" ? "loading" : 
-                        <EmentaItem source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Fish_icon.svg/1101px-Fish_icon.svg.png"
+                        <EmentaItem source="./fish.png"
                             alt="fish_icon"
                             maxWidth="200px"
                             title={ementa[0]["PlateName"]}
@@ -35,7 +35,7 @@ function EmentaRow({id}:any) {
                 </div>
                 <div className='col-md m-0 p-3 bg-special-2'>
                     {ementa == "" ? "loading" : 
-                        <EmentaItem source="http://cdn.onlinewebfonts.com/svg/img_483512.png"
+                        <EmentaItem source="./meat.png"
                                     alt="meat_icon"
                                     maxWidth="200px"
                                     title={ementa[1]["PlateName"]}
