@@ -21,7 +21,7 @@ function HomeRow({id}:any) {
     </div>
 
     <div className="col-md-auto p-0 d-flex flex-row-reverse">
-        <Image source="https://image.winudf.com/v2/image/Y29tLmhhYmliaS5UYXN0eWFuZFl1bW15Rm9vZFJlY2lwZV9zY3JlZW5fMTFfMTUxNDE5MDc2Ml8wMTA/screen-11.jpg?fakeurl=1&type=.jpg" 
+        <Image source="./plate_showcase.png" 
                   alt="food_picture"
                   maxWidth="600px"
                    />
